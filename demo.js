@@ -11,13 +11,29 @@ function deleteLast() {
     document.getElementById("result").value = currentValue.slice(0, -1);
 }
 
+function add() {
+    document.getElementById("result").value += "+";
+}
+
+function sub() {
+    document.getElementById("result").value += "-";
+}
+
+function mul() {
+    document.getElementById("result").value += "*";
+}
+
+function div() {
+    document.getElementById("result").value += "/";
+}
+
+function mod() {
+    document.getElementById("result").value += "%";
+}
+
 function evaluateExpression() {
-    try {
-        let result = eval(document.getElementById("result").value);
-        document.getElementById("result").value = result;
-    } catch (error) {
-        alert("Invalid Expression");
-    }
+    let result = eval(document.getElementById("result").value);
+    document.getElementById("result").value = result;
 }
 
 function square() {
@@ -52,5 +68,7 @@ function factorial() {
     }
     document.getElementById("result").value = fact;
 }
+
+
 
 
